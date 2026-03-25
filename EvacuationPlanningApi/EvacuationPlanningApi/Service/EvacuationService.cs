@@ -196,7 +196,7 @@ namespace EvacuationPlanningApi.Service
                     {
                         ZoneId = zone.ZoneId,
                         VehicleId = candidate.Vehicle.VehicleId,
-                        ETA = Math.Round(candidate.EtaMinutes, 2).ToString(),
+                        ETA = candidate.EtaMinutes,
                         NumberOfPeople = peopleToEvacuate
                     });
 

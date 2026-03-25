@@ -20,14 +20,23 @@
             return Math.PI * angle / 180.0;
         }
 
-        public static double CalculateETA(double distanceKm, double speedKmPerHour)
+        public static string CalculateETA(double distanceKm, double speedKmPerHour)
         {
-            if (speedKmPerHour <= 0)
+            if (speedKmPerHour <= 0) return "0 minutes";
+
+            // Calculate total minutes
+            double totalMinutes = (distanceKm / speedKmPerHour) * 60.0;
+
+            // Convert to a TimeSpan object
+            TimeSpan time = TimeSpan.FromMinutes(totalMinutes);
+
+            // Build the string
+            if (time.TotalHours >= 1)
             {
-                throw new ArgumentOutOfRangeException(nameof(speedKmPerHour), "Speed must be greater than 0.");
+                return $"{(int)time.TotalHours} hour {time.Minutes} minutes";
             }
 
-            return (distanceKm / speedKmPerHour) * 60.0;
+            return $"{time.Minutes} minutes";
         }
     }
 }
