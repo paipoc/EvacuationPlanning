@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AspireApp/AspireApp.AppHost/AspireApp.AppHost.csproj" Id="0e7682b4-fb81-4479-9f3c-0be2f1ed4cd2" />
+  <Project Path="AspireApp/AspireApp.ServiceDefaults/AspireApp.ServiceDefaults.csproj" />
+  <Project Path="EvacuationPlanningApi.Test/EvacuationPlanningApi.Test.csproj" Id="74b880fb-746d-434f-abde-eaf388ff2d5e" />
+  <Project Path="EvacuationPlanningApi/EvacuationPlanningApi.csproj" />
+</Solution>
